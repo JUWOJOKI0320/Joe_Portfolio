@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Genos:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Genos:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+.Aboutme-container{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 120px;
+    width: 100%;
+    height: calc(100vh - 120px);
+    font-family: "Poppins", serif;
+    color: #FFFFFF;
+    overflow: hidden;
+}
+
+
+.Aboutme-container-container{
+    position: relative;
+    bottom: 80px;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    align-items: center;
+    gap: 10em;
+}
+
+.Aboutme-container h1{
+    font-weight: 400;
+    line-height:80px;
+    font-size: 36px;
+    letter-spacing: 3px;
+}
+
+.Aboutme-container span:nth-child(1){
+    font-size: 26px;
+}
+
+.Aboutme-container span:nth-child(3){
+    letter-spacing: 13px;
+    font-weight:bolder;
+    font-size: 77px;
+    color: #E9B952;
+}
+
+.Aboutme-container-container button{
+    position: relative;
+    left: 27%;
+    background-color: #70874c85;
+    width: 15vw;
+    height: 5.5vh;
+    min-width: 150px;
+    min-height: 15px;
+    font-family: "Poppins", serif;
+    color: #FFFFFF;
+    border: 0;
+    border-radius: 25px;
+    transition: 0.1s ease-in;
+}
+
+.Aboutme-container-container button:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 5px 0px rgb(243, 241, 125);
+    transform: scale(1.01);
+    color: rgb(247, 217, 179);
+}
+
+.me img{
+    width: 22vw;
+    min-width: 240px;
+    border-radius: 20%;
+}
+
+.circle1{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    min-width: 100px;
+    min-height: auto;
+    background-color: #505150;
+    border-radius: 50%;
+    bottom: -65px;
+    right: -50px;
+}
+
+.circle2{
+    position: absolute;
+    bottom: -145px;
+    right: -50px;
+    width: 300px;
+    height: 200px;
+    min-width: 100px;
+    min-height: auto;
+    background-color: #AF9748;
+    border-radius: 50%;
+    transform: rotate(30deg);
+}
+
+
+@media (max-width: 1047px){
+    .Aboutme-container-container{
+        display: flex;
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
+        text-align: center;
+    }
+
+    .Aboutme-container h1{
+        font-size: 4vw;
+        line-height:9vw;
+    }
+    
+    .Aboutme-container span:nth-child(1){
+        font-size: 4vw;
+    }
+    
+    .Aboutme-container span:nth-child(3){
+        font-size: 7vw;
+    }
+
+    .Aboutme-container-container button{
+        left: 0;
+    }
+
+    .circle1{
+        width: 20vw;
+        height: 20vw;
+    }
+
+    .circle2{
+        width: 20vw;
+        height: 30vw;
+        transform: rotate(120deg);
+    }
+}
+
+.OJM{
+    position: absolute;
+    bottom:0;
+    left: 0;
+    margin-left: 20px;
+}
+
+.OJM h1{
+    line-height: 22px;
+    font-size: 12px;
+}
+
+.OJM h1 span:nth-child(2){
+    color: #E9B952;
+    font-size: 16px;
+    font-weight: bolder;
+    letter-spacing: 7px;
+}
+
+.OJM h1 span:nth-child(4){
+    color: #a56a46c5;
+    font-weight: bolder;
+    letter-spacing: 0px;
+}
+
+.ScrollDown{
+    position: absolute;
+    bottom:0;
+    font-size: 12px;
+    transition: 0.1s ease-in;
+}
+
+.ScrollDown i{
+    color: #E9B952;
+}
+
+@media (max-width: 600px){
+    .ScrollDown{
+        transform: translateY(100%)
+    }
+
+    .OJM h1{
+        font-size: 10px;
+    }
+}
