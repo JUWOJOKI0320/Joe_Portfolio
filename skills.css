@@ -1,7 +1,7 @@
 .Skills-container{
     position:relative;
     top: 100vh;
-    height: calc(100vh + 120px);
+    height: 100vh;
     z-index: 2;
     background-color: #DE623C;
 }
