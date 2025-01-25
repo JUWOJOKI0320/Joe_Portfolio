@@ -7,6 +7,7 @@ body,html{
     box-sizing: border-box;
     background-color: #1D1919;
     height: 100%;
+    scroll-behavior: smooth;
 }
 
 body::-webkit-scrollbar{
@@ -56,11 +57,19 @@ body::-webkit-scrollbar-thumb{
 }
 
 .link-container .menu{
-    position: absolute;
+    position: relative;
     left: 10px;
     width: 20px;
+    margin-right: 0px;
     transform: rotate(90deg);
+    transition: .1s ease-in;
 }
+
+.link-container .menu:hover{
+    cursor: pointer;
+    margin-right: -25px;
+}
+
 
 .link-container-container{
     display: flex;
