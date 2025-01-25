@@ -3,26 +3,25 @@
 
 
 .Aboutme-container{
-    position: fixed;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 120px;
     width: 100%;
-    height: calc(100vh - 120px);
+    height: 100vh;
     font-family: "Poppins", serif;
     color: #FFFFFF;
-    overflow: hidden;
+    overflow:hidden;
 }
 
 
 .Aboutme-container-container{
     position: relative;
-    bottom: 80px;
     display: flex;
     flex-wrap: wrap-reverse;
     align-items: center;
     gap: 10em;
+    transition: transform 1s ease;
 }
 
 .Aboutme-container h1{
@@ -41,6 +40,7 @@
     font-weight:bolder;
     font-size: 77px;
     color: #E9B952;
+    border-radius: 30px;
 }
 
 .Aboutme-container-container button{
@@ -65,11 +65,21 @@
     color: rgb(247, 217, 179);
 }
 
+.Aboutme-container-container button a{
+    text-decoration: none;
+    display: block;
+    padding: 9px 0 ;
+    color: #FFFFFF;
+    border-radius: 30px;
+}
+
 .me img{
     width: 22vw;
-    min-width: 240px;
-    border-radius: 20%;
+    min-width: 190px;
+    border-radius: 23%;
+    box-shadow: 1px 1px 2px 0px #E9B952;
 }
+
 
 .circle1{
     position: absolute;

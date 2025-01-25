@@ -1,27 +1,47 @@
 const menu = document.getElementById("menu");
+const skills = document.getElementById("Skills-container");
+const aboutme = document.getElementById("Aboutme-container-container");
+const linkContainer = document.getElementById("link-container");
+const sideMenu = document.getElementById("sidemenu");
 
-menu.onclick = () => {
-    const linkContainer = document.getElementById("link-container");
-    if(linkContainer.style.transform != "translate(90%)"){
-        linkContainer.style.transform = "translate(90%)";
+
+menu.addEventListener("click", () => {
+    if(linkContainer.style.transform != "translate(88%)"){
+        linkContainer.style.transform = "translate(88%)";
     }
     else{
         linkContainer.style.transform = "translate(0%)";
+        setTimeout(() => {
+            linkContainer.style.transform = "";
+    },500)
     }
-};
+});
 
-/*const MMenu = document.querySelector(".menu");
-        const linkContainer = document.querySelector(".link-container");
+window.addEventListener("scroll", () =>{    
 
-        // Add hover event to the .menu
-        MMenu.addEventListener("mouseenter", () => {
-            // Change the styles of link-container when hovering over menu
-            linkContainer.style.cursor = "pointer";
-            linkContainer.style.transform = "-25px";
-        });
+    console.log(window.scrollY)
+    // Calculate the translateY value based on the scroll position
+    const translateValue = -window.scrollY * 1; // Adjust the multiplier for speed
 
-        // Reset styles when the hover ends
-        MMenu.addEventListener("mouseleave", () => {
-            linkContainer.style.cursor = "default";
-            linkContainer.style.marginRight = "0";
-        });*/
+    // Apply the transformation
+    skills.style.transform = `translateY(${translateValue}px)`;
+
+    const scaleValue = 1 + window.scrollY * -0.0002 // Adjust the multiplier for scaling speed
+
+    // Apply the scale transformation to aboutme
+    aboutme.style.transform = `scale(${scaleValue})`;
+
+    const opacityValue = 1 + window.scrollY * -0.003
+
+    aboutme.style.opacity = `${opacityValue}`;
+    
+    sideMenu.style.opacity =`${-opacityValue + 0.9}`;
+    sideMenu.style.width = "18px"
+
+    setTimeout(() => {
+        sideMenu.style.animation = ""; // Reset animation
+        
+    }, 600); // Duration of the bounce animation
+});
+
+

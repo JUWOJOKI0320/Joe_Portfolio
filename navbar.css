@@ -6,7 +6,7 @@ body,html{
     margin: 0;
     box-sizing: border-box;
     background-color: #1D1919;
-    height: 100%;
+    height: 100vh;
     scroll-behavior: smooth;
 }
 
@@ -42,6 +42,19 @@ body::-webkit-scrollbar-thumb{
     color: #E9B952;
 }
 
+.sidemenu{
+    position: fixed;
+    right: 2%;
+    top: 6%;
+    background-color: #e9b952;
+    z-index: 5;
+    width:0px;
+    padding: 10px;
+    border-radius: 32.5%;
+    opacity: 0;
+    transition: opacity .1s ease-in,.3s ease-in-out;
+}
+
 .link-container{
     position: relative;
     display: flex;
@@ -49,29 +62,34 @@ body::-webkit-scrollbar-thumb{
     gap: 15px;
     justify-content:space-evenly;
     right: -23px;
-    background-color: #E9B952;
+    background-color: #e9b952;
     width: 605px;
     height: 58px;
     border-radius: 30px;
-    transition: .2s ease-in-out
+    transition: .45s ease-in-out
 }
 
 .link-container .menu{
     position: relative;
-    left: 10px;
+    left: 0px;
     width: 20px;
+    padding: 19px;
+    border-radius: 0 0 30px 30px;
     margin-right: 0px;
     transform: rotate(90deg);
-    transition: .1s ease-in;
+    transition: .2s ease-in;
+    z-index: 1;
 }
 
 .link-container .menu:hover{
     cursor: pointer;
-    margin-right: -25px;
+    transform: rotate(180deg);
 }
 
 
 .link-container-container{
+    position: relative;
+    right: 35px;
     display: flex;
     align-items: center;
     width: 100%;
@@ -104,13 +122,35 @@ body::-webkit-scrollbar-thumb{
     width: 100%;
 }
 
+/* Animation for bounce effect */
+@keyframes bounce {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.3); /* Scale up */
+    }
+    70% {
+        transform: scale(1.2); /* Shrink a little */
+    }
+    100% {
+        transform: scale(1.1); /* End with a smaller scale */
+    }
+}
 
 @media (max-width: 800px){
     .link-container{
         transform: translate(103%);
     }
 
+    .sidemenu{
+        width:18px;
+        animation: bounce 0.6s ease;
+        opacity: 1;
+    }
+
 }
+
 
 @media (max-width: 650px){
     .link-container{

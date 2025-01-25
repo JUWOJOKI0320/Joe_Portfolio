@@ -1,8 +1,7 @@
 .Skills-container{
     position:relative;
-    top: 100vh;
-    height: 100vh;
-    z-index: 2;
-    background-color: #DE623C;
-    border-radius:50px 50px 0 0;
+    height: 200vh;
+    z-index: 4;
+    background-color: #de623c;
+    border-radius:20px 20px 0 0;
 }
