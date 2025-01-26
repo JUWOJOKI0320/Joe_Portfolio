@@ -8,6 +8,7 @@ body,html{
     background-color: #1D1919;
     height: 100vh;
     scroll-behavior: smooth;
+    transition: background-color 0.3s ease-in-out;
 }
 
 body::-webkit-scrollbar{
@@ -52,7 +53,7 @@ body::-webkit-scrollbar-thumb{
     padding: 10px;
     border-radius: 32.5%;
     opacity: 0;
-    transition: opacity .1s ease-in,.3s ease-in-out;
+    transition:.3s ease-in-out;
 }
 
 .link-container{

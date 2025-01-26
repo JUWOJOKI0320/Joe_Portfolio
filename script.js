@@ -3,7 +3,12 @@ const skills = document.getElementById("Skills-container");
 const aboutme = document.getElementById("Aboutme-container-container");
 const linkContainer = document.getElementById("link-container");
 const sideMenu = document.getElementById("sidemenu");
+const body = document.querySelector("body");
+const light = document.getElementById("light");
+const dark = document.getElementById("dark");
+const ojmh1 = document.querySelector(".OJM h1");
 
+const h1 = document.querySelector("h1");
 
 menu.addEventListener("click", () => {
     if(linkContainer.style.transform != "translate(88%)"){
@@ -15,11 +20,31 @@ menu.addEventListener("click", () => {
             linkContainer.style.transform = "";
     },500)
     }
+
+
+});
+
+light.addEventListener("click", () =>{
+    body.style.backgroundColor = "#ece6e6";
+    light.style.transform = "scale(0)";
+    dark.style.transform = "scale(1)";
+    h1.style.color = "#1D1919";
+    ojmh1.style.color = "#1D1919";
+    dark.style.transform = "";
+});
+
+dark.addEventListener("click", () =>{
+    body.style.backgroundColor = "#1D1919";
+    light.style.transform = "scale(1)";
+    dark.style.transform = "scale(0)";
+    h1.style.color = "white";
+    ojmh1.style.color = "white";
+    light.style.transform = "";
 });
 
 window.addEventListener("scroll", () =>{    
 
-    console.log(window.scrollY)
+    console.log(Math.floor(window.scrollY))
     // Calculate the translateY value based on the scroll position
     const translateValue = -window.scrollY * 1; // Adjust the multiplier for speed
 
@@ -31,17 +56,17 @@ window.addEventListener("scroll", () =>{
     // Apply the scale transformation to aboutme
     aboutme.style.transform = `scale(${scaleValue})`;
 
-    const opacityValue = 1 + window.scrollY * -0.003
+    const opacityValue = 1 + window.scrollY * -0.003;
 
     aboutme.style.opacity = `${opacityValue}`;
     
-    sideMenu.style.opacity =`${-opacityValue + 0.9}`;
-    sideMenu.style.width = "18px"
-
-    setTimeout(() => {
-        sideMenu.style.animation = ""; // Reset animation
-        
-    }, 600); // Duration of the bounce animation
+    if (window.scrollY >= 330 && window.innerWidth <= 800){
+    sideMenu.style.opacity = "1";
+    sideMenu.style.width = "18px";}
+    else{
+    sideMenu.style.opacity = "0";
+    sideMenu.style.width = "0px";
+    }   
 });
 
 
