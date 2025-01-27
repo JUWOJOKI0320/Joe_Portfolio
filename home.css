@@ -2,20 +2,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Genos:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 
-.Aboutme-container{
+.Home-container{
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 100vh;
+    z-index: 1;
     font-family: "Poppins", serif;
     color: #FFFFFF;
     overflow:hidden;
 }
 
 
-.Aboutme-container-container{
+.Home-container-container{
     position: relative;
     display: flex;
     flex-wrap: wrap-reverse;
@@ -24,18 +25,18 @@
     transition: transform 1s ease;
 }
 
-.Aboutme-container h1{
+.Home-container h1{
     font-weight: 400;
     line-height:80px;
     font-size: 36px;
     letter-spacing: 3px;
 }
 
-.Aboutme-container span:nth-child(1){
+.Home-container span:nth-child(1){
     font-size: 26px;
 }
 
-.Aboutme-container span:nth-child(3){
+.Home-container span:nth-child(3){
     letter-spacing: 13px;
     font-weight:bolder;
     font-size: 77px;
@@ -43,10 +44,10 @@
     border-radius: 30px;
 }
 
-.Aboutme-container-container button{
+.Home-container-container button{
     position: relative;
     left: 27%;
-    background-color: #657a44;
+    background-color: #8c263c;
     width: 15vw;
     height: 5.5vh;
     min-width: 150px;
@@ -58,14 +59,14 @@
     transition: 0.1s ease-in;
 }
 
-.Aboutme-container-container button:hover{
+.Home-container-container button:hover{
     cursor: pointer;
     box-shadow: 0px 0px 5px 0px rgb(243, 241, 125);
     transform: scale(1.01);
     color: rgb(247, 217, 179);
 }
 
-.Aboutme-container-container button a{
+.Home-container-container button a{
     text-decoration: none;
     display: block;
     padding: 9px 0 ;
@@ -87,7 +88,7 @@
     height: 200px;
     min-width: 100px;
     min-height: auto;
-    background-color: #505150;
+    background-color: #8c263c;
     border-radius: 50%;
     bottom: -65px;
     right: -50px;
@@ -108,7 +109,7 @@
 
 
 @media (max-width: 1047px){
-    .Aboutme-container-container{
+    .Home-container-container{
         display: flex;
         flex-wrap: wrap-reverse;
         justify-content: center;
@@ -117,20 +118,20 @@
         text-align: center;
     }
 
-    .Aboutme-container h1{
+    .Home-container h1{
         font-size: 4vw;
         line-height:9vw;
     }
     
-    .Aboutme-container span:nth-child(1){
+    .Home-container span:nth-child(1){
         font-size: 4vw;
     }
     
-    .Aboutme-container span:nth-child(3){
+    .Home-container span:nth-child(3){
         font-size: 7vw;
     }
 
-    .Aboutme-container-container button{
+    .Home-container-container button{
         left: 0;
     }
 
