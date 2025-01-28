@@ -1,5 +1,5 @@
 const menu = document.getElementById("menu");
-const skills = document.getElementById("Skills-container");
+const skills = document.getElementById("Skills-container-container");
 const home = document.getElementById("Home-container-container");
 const linkContainer = document.getElementById("link-container");
 const sideMenu = document.getElementById("sidemenu");
@@ -7,14 +7,13 @@ const body = document.querySelector("body");
 const light = document.getElementById("light");
 const dark = document.getElementById("dark");
 const ojmh1 = document.querySelector(".OJM h1");
-<<<<<<< HEAD
 const logo = document.getElementById("logo")
-=======
 const scrolldownp = document.querySelector(".ScrollDown p");
 const scrolldowni = document.querySelectorAll(".bx.bxs-chevrons-down");
->>>>>>> f76b79e112323da7a34d1176daca929178172ee8
-
 const h1 = document.querySelector("h1");
+const texth1 = document.querySelector(".text h1");
+const projecta = document.querySelector(".Projects-container-container a");
+const Up = document.getElementById("Up");
 
 /*menu.addEventListener("click", () => {
     if(linkContainer.style.transform != "translate(88%)"){
@@ -45,6 +44,9 @@ light.addEventListener("click", () =>{
     scrolldowni.forEach((element) => {
         element.style.color = "#1D1919";
     });
+    texth1.style.color = "#1D1919";
+    projecta.style.color = "#1D1919"
+    Up.style.color ="#1D1919";
     dark.style.transform = "";
 });
 
@@ -58,6 +60,9 @@ dark.addEventListener("click", () =>{
     scrolldowni.forEach((element) => {
         element.style.color = "#E9B952";
     });
+    texth1.style.color = "antiquewhite";
+    projecta.style.color =  "antiquewhite";
+    Up.style.color ="#1D1919";
     light.style.transform = "";
 });
 
@@ -69,7 +74,7 @@ window.addEventListener("scroll", () =>{
     skills.style.transform = `translateY(${translateValue}%)`;
 
     // Optional: Update the Home section's opacity or other effects
-    const opacityValue = Math.max(0, 1 - scrollY * 0.002); // Gradual fade-out
+    const opacityValue = Math.max(0, 1 - scrollY * 0.003); // Gradual fade-out
     home.style.opacity = opacityValue;
 
     home.style.opacity = `${opacityValue}`;

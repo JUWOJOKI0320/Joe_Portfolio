@@ -2,10 +2,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Genos:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 
+#skills{
+    position: absolute;
+    bottom: 11.3rem;
+    z-index: 5;
+    background-color: inherit;
+    width: 100%;
+}
+
 .Skills-container{
     position:relative;
     height: auto;
-    min-height: 100vh;
+    min-height: 70vh;
+    max-height: 75.5vh;
     z-index: 2;
     background-color:#6a1225;
     border-radius:20px 20px 0 0;
@@ -13,24 +22,34 @@
 }
 
 .Skills-container h1{
+    position: relative;
     font-size: clamp(1.5rem, 5vw, 5rem);
     font-weight:bolder;
     display: inline;
     padding: 0;
     margin: 0;
     color:#ece6e6;
-    position: relative;
     top: .7em;
     left: .7em;
 }
-    
 
 .Skills-container-container{
+    position:relative;
+    height: auto;
+    min-height: 30vh;
+    z-index: 2;
+    background-color:#6a1225;
+    border-radius:20px;
+    font-family: "Poppins",serif;
+}
+    
+
+.Skills-container-container-container{
     position: relative;
     display: flex;
-    top: 7em;
     flex-direction: row;
     flex-wrap: wrap;
+    margin-top:clamp(2rem, 5vw, 10rem);
     align-items: center;
     gap: 2em;
     justify-content: center;
@@ -40,26 +59,55 @@
 
 
 .skill-logos{
+    margin: 30px;
     display: block;
     width: clamp(5rem, 8vw, 10rem);
     height: clamp(5rem, 8vw, 10rem);
     margin: 0 20px;
     padding: 0;
     border: 30px;
-    margin-bottom: 5px; /* Space between the image and the text */
+    margin-bottom: 10px; /* Space between the image and the text */
 }
 
 #css{
-    height: clamp(5rem, 8vw, 10rem);
-    width: clamp(5rem, 6vw, 10rem);
+    height: clamp(4.5rem, 7vw, 10rem);
+    width: clamp(4.5rem, 6.8vw, 10rem);
 }
 
 #js{
-    height: clamp(5rem, 8vw, 10rem);
-    width: clamp(5rem, 8vw, 10rem);
+    height: clamp(4rem, 6.7vw, 10rem);
+    width: clamp(4rem, 6.7vw, 10rem);
 }
+
+#html{
+    height: clamp(4rem, 6.5vw, 10rem);
+    width: clamp(4rem, 5.3vw, 10rem);
+}
+
+#html,#css,#js{
+    margin-bottom: 20px;
+}
+
 
 #html, #css, #js, #java,
 #python, #c, #cpp{
     text-align: center;
 }
+
+.Aspiring{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    position: relative;
+    font-size: clamp(1rem, 4vw, 10rem);
+    color: #E9B952;
+    position: relative;
+    margin-top: clamp(2rem, 4vw, 10rem);
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0 0 30px 0;
+}
+
+.Aspiring li:hover {
+    color: rgb(226, 200, 152); /* Change to your desired hover color */
+  }

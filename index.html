@@ -6,7 +6,11 @@
   <link rel="stylesheet" href="navbar.css">
   <link rel="stylesheet" href="home.css">
   <link rel="stylesheet" href="skills.css">
+  <link rel="stylesheet" href="aboutme.css">
+  <link rel="stylesheet" href="projects.css">
+  <link rel="stylesheet" href="contact.css">
   <link href="https://cdn.jsdelivr.net/npm/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link rel="icon" type="image/png" href="4.png">
   <title>Joe Christian Lina</title>
 </head>
 <body>
@@ -15,11 +19,13 @@
     <div class="link-container" id="link-container">
       <img src="menu.svg" alt="" class="menu" id="menu">
       <div class="link-container-container">
-      <a href="#">About me</a>
-      <a href="#Skills-container">Skills</a>
-      <a href="#">Projects</a>
-      <a href="#">Contact</a>
+      <a href="#abouth1">About me</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contactme">Contact</a>
     </div>
+      <i class='bx bxs-moon' id="dark"></i>
+      <i class='bx bx-sun' id="light"></i>
     </div>
     </div>
     <div> <img src="menu.svg" id="sidemenu" class="sidemenu"></div>
@@ -37,9 +43,12 @@
     <div class="circle2"></div>
   </div>
 
+  <div id="skills"></div>
+
   <div class="Skills-container" id="Skills-container">
-    <h1>Techstack</h1>
-    <div class="Skills-container-container">
+    <div class="Skills-container-container" id="Skills-container-container">
+      <h1>TECHSTACK</h1>
+    <div class="Skills-container-container-container">
       <div><img src="html.png" class="skill-logos" id="html">HTML</div>
       <div><img src="css.png" class="skill-logos" id="css">CSS</div>
       <div><img src="js.png" class="skill-logos" id="js">JavaScript</div>
@@ -48,9 +57,53 @@
       <div><img src="C.png" class="skill-logos" id="c">C</div>
       <div><img src="cpp.png" class="skill-logos" id="cpp">C++</div>
     </div>
+    <h1>ASPIRING</h1>
+    <div class="Aspiring">
+      <li>Web Developer</li>
+      <li>Software Developer</li></div>
+    </div>
   </div>
-  <i class='bx bxs-moon' id="dark"></i>
-  <i class='bx bx-sun' id="light"></i>
+
+  <div id="aboutme"></div>
+  <div class="abouth1" id="abouth1">ABOUT ME</div>
+  <div class="Aboutme-container" id="Aboutme-container">
+    <div class="Aboutme-container-container" id="Aboutme-container">
+    <div><img src="me.png" alt="" class="me"></div>
+    <div class="text" id="text"><h1>Hi! I'm Joe, <br> <span>A fourth-year Computer Science student at the Technological University of the Philippines, looking for internship opportunities. I’ve worked on various projects, including EZMinutes, a Python-based AI tool for transcribing meeting minutes, and BaybayinEye, a machine learning project for translating Baybayin to Tagalog. <br> <br>I’ve also developed UI clones of platforms like Spotify, Netflix, and Disney+, and worked on point-of-sale systems in C++, Java, and Visual Basic. I’m eager to apply my skills and take on new challenges during an internship.</span></h1></div>
+  </div>
+</div>
+
+  <div id="projects"></div>
+  <div class="Projects-container">
+    <h1>Selected Projects</h1>
+    <div class="Projects-container-container">
+      <a href="https://juwojoki0320.github.io/Lina_Portfolio/"><ul><img src="prevport.png" alt=""><p>Previous Web portfolio</p></ul></a>
+      <a href="https://juwojoki0320.github.io/Disney-Homepage-UI-Clone/"><ul><img src="disney+.png" alt=""><p>Disney+ Homepage UI Clone</p></ul></a>
+      <a href="https://juwojoki0320.github.io/Spotify-Homepage-UI-Clone/"><ul><img src="spotify.png" alt=""><p>Spotify Homepage UI Clone</p></ul></a>
+      <a href="https://juwojoki0320.github.io/Netflix-Homepage-UI-Clone/"><ul><img src="netflix.png" alt=""><p>Netflix Homepage UI Clone</p></ul></a>
+      <a href="https://juwojoki0320.github.io/Calculator/"><ul><img src="calculator.png" alt=""><p>Simple Calculator</p></ul></a>
+      <a href="https://juwojoki0320.github.io/Digital-Clock/"><ul><img src="clock.png" alt=""><p>Simple Digital Clock</p></ul></a>
+    </div>
+  </div>
+
+  <div id="contactme"></div>
+  <div class ="contact" id="contact">
+    <div class ="contact-container">
+    <form action="https://api.web3forms.com/submit" method="POST" class = "contact-left">
+        <div class="contact-left-title">
+            <h1>Get in touch</h1>
+            <hr>
+        </div>
+        <input type="hidden" name="access_key" value="6f4864fa-ceec-4d8e-bf55-71faddceb674">
+        <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
+        <input type="email" name="email" placeholder="Your Email" class="contact-inputs" required>
+        <textarea name="message" placeholder="Your Message" class="contact-inputs" required></textarea>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+</div>
+
+  <a href="#"><i class='bx bxs-chevrons-down' id="Up"></i></a>
 </body>
   <script src="script.js"></script>
 </html>
