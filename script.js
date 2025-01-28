@@ -7,7 +7,12 @@ const body = document.querySelector("body");
 const light = document.getElementById("light");
 const dark = document.getElementById("dark");
 const ojmh1 = document.querySelector(".OJM h1");
+<<<<<<< HEAD
 const logo = document.getElementById("logo")
+=======
+const scrolldownp = document.querySelector(".ScrollDown p");
+const scrolldowni = document.querySelectorAll(".bx.bxs-chevrons-down");
+>>>>>>> f76b79e112323da7a34d1176daca929178172ee8
 
 const h1 = document.querySelector("h1");
 
@@ -36,6 +41,10 @@ light.addEventListener("click", () =>{
     dark.style.transform = "scale(1)";
     h1.style.color = "#1D1919";
     ojmh1.style.color = "#1D1919";
+    scrolldownp.style.color =  "#1D1919";
+    scrolldowni.forEach((element) => {
+        element.style.color = "#1D1919";
+    });
     dark.style.transform = "";
 });
 
@@ -43,8 +52,12 @@ dark.addEventListener("click", () =>{
     body.style.backgroundColor = "#1D1919";
     light.style.transform = "scale(1)";
     dark.style.transform = "scale(0)";
-    h1.style.color = "white";
-    ojmh1.style.color = "white";
+    h1.style.color = "#ece6e6";
+    ojmh1.style.color = "#ece6e6";
+    scrolldownp.style.color =  "#ece6e6";
+    scrolldowni.forEach((element) => {
+        element.style.color = "#E9B952";
+    });
     light.style.transform = "";
 });
 
