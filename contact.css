@@ -29,7 +29,9 @@
     gap:20px;
 }
 
+
 .contact-left-title h1{
+    text-align: center;
     font-weight: 600;
     color: antiquewhite;
     font-family: "Poppins",serif;

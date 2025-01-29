@@ -12,8 +12,13 @@ const scrolldownp = document.querySelector(".ScrollDown p");
 const scrolldowni = document.querySelectorAll(".bx.bxs-chevrons-down");
 const h1 = document.querySelector("h1");
 const texth1 = document.querySelector(".text h1");
-const projecta = document.querySelector(".Projects-container-container a");
+const projecta = document.querySelector(".Projects-container-container ul");
+const allParagraphs = document.querySelectorAll(".Projects-container-container p");
 const Up = document.getElementById("Up");
+const abouth1 = document.getElementById("abouth1");
+const projecth1 = document.getElementById("projecth1");
+const contacth1 = document.querySelector(".contact-container h1");
+const inputs = document.querySelectorAll(".contact-inputs");
 
 /*menu.addEventListener("click", () => {
     if(linkContainer.style.transform != "translate(88%)"){
@@ -44,9 +49,18 @@ light.addEventListener("click", () =>{
     scrolldowni.forEach((element) => {
         element.style.color = "#1D1919";
     });
+    allParagraphs.forEach((paragraph) => {
+        paragraph.style.color = "#1D1919"; // Set to your desired color
+      });
+    inputs.forEach((input) => {
+        input.style.backgroundColor = "#1D1919"; // Change background to black
+        input.style.color = "white"; // Change text color to white for contrast
+    });
     texth1.style.color = "#1D1919";
-    projecta.style.color = "#1D1919"
     Up.style.color ="#1D1919";
+    abouth1.style.color = "#1D1919";
+    projecth1.style.color = "#1D1919";
+    contacth1.style.color = "#1D1919";
     dark.style.transform = "";
 });
 
@@ -60,9 +74,18 @@ dark.addEventListener("click", () =>{
     scrolldowni.forEach((element) => {
         element.style.color = "#E9B952";
     });
+    allParagraphs.forEach((paragraph) => {
+        paragraph.style.color = "antiquewhite"; // Set to your desired color
+      });
+    inputs.forEach((input) => {
+        input.style.backgroundColor = ""; // Change background to black
+        input.style.color = ""; // Change text color to white for contrast
+    });
     texth1.style.color = "antiquewhite";
-    projecta.style.color =  "antiquewhite";
     Up.style.color ="#1D1919";
+    contacth1.style.color = "antiquewhite";
+    abouth1.style.color = "antiquewhite"
+    projecth1.style.color = "antiquewhite"
     light.style.transform = "";
 });
 
@@ -79,6 +102,7 @@ window.addEventListener("scroll", () =>{
 
     home.style.opacity = `${opacityValue}`;
     logo.style.opacity = `${opacityValue}`;
+    Up.style.opacity = `${opacityValue+1}`;
     
     if (window.scrollY >= 330 && window.innerWidth <= 800){
     sideMenu.style.opacity = "1";
