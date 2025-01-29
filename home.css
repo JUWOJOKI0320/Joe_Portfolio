@@ -225,12 +225,17 @@ footer{
     width: 100%;
     font-family: "Poppins", serif;
     z-index: 100;
-    font-size: 18px;
+    font-size: 17px;
     color: antiquewhite;
+    padding: 0;
+    margin: 0;
 }
 
 footer p{
+    padding: 0;
+    margin: 0;
     display: block;
     padding: 30px;
     text-align: center;
+    line-height: 30px;
 }
