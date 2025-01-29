@@ -43,7 +43,6 @@ menu.addEventListener("click", () => {
 
 sidemenuButton.addEventListener("click", () =>{
     sideMenu.classList.toggle("active");
-    sidemenuButton.style.transform = "rotate(90deg)";
 });
 
 function handleModeChange(event) {
