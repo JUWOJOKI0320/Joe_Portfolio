@@ -1,0 +1,58 @@
+#projects {
+    position: absolute;
+    z-index: 50;
+    width: 100%;
+    height: 1px;
+}
+
+
+.Projects-container{
+    background-color: inherit;
+    display: block;
+    position:relative;
+    padding-top: 4rem;
+    bottom: 8.3rem;
+    height: auto;
+}
+
+.Projects-container h1{
+    position: relative;
+    z-index: 50;
+    font-family: "Poppins",serif;
+    font-weight: bolder;
+    top: 10px;
+    text-align: center;
+    font-size: clamp(2rem,5vw,10rem);
+    color: antiquewhite;
+}
+
+.Projects-container-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    background-color: inherit;
+    height: auto;
+}
+
+.Projects-container-container img{
+    width: clamp(15rem,40vw,50rem);
+    height: clamp(8rem,25vw,50rem);
+    border-radius: 10%;
+    border: 3px solid #051612;
+    object-fit: cover;
+    transition: 0.3s ease-in-out;
+}
+
+.Projects-container-container img:hover{
+    transform: scale(1.03);
+}
+
+.Projects-container-container a{
+    font-family: "Poppins",serif;
+    color: antiquewhite;
+    text-align: center;
+    text-decoration: none;
+}

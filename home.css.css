@@ -1,227 +1,146 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Genos:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Genos:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+#aboutme {
+    position: absolute;
+    top: 174.5%;
+    z-index: 10;
+    width: 100%;
+}
 
-.Aboutme-container{
+.abouth1{
     position: relative;
-    display: flex;
+    z-index: 50;
+    font-family: "Poppins",serif;
+    font-weight: bolder;
+    top: 20px;
+    text-align: center;
+    font-size: clamp(2rem,5vw,10rem);
+    color: antiquewhite;
+}
+
+.Aboutme-container {
+    padding-top: 5rem;
+    padding-bottom: 1rem;
+    position: relative;
+    bottom: 8.3rem;
+    height: auto;
+    display: flex;  /* Turn the container into a flex container */
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100vh;
-    font-family: "Poppins", serif;
-    color: #FFFFFF;
-    overflow:hidden;
+    background-color: inherit;
+    flex-wrap: wrap;
+    flex-direction: row;  /* Default behavior: items are laid out in a row (side by side) */
+    gap: 60px;  /* Add space between the columns */
 }
-
 
 .Aboutme-container-container{
+    position: absolute;
+    height: auto;
+    top: 30px;
+    display: flex;  /* Turn the container into a flex container */
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;  /* Default behavior: items are laid out in a row (side by side) */
+    gap: 60px;  /* Add space between the columns */
+}
+
+.Aboutme-container div {
+    margin: 0;
     position: relative;
     display: flex;
-    flex-wrap: wrap-reverse;
-    align-items: center;
-    gap: 10em;
-    transition: transform 1s ease;
+    justify-content: center;  /* To center the image in its grid cell */
+    align-items: center;  /* Vertically center the image */
+    margin-bottom: 20px;
 }
 
-.Aboutme-container h1{
-    font-weight: 400;
-    line-height:80px;
-    font-size: 36px;
-    letter-spacing: 3px;
-}
-
-.Aboutme-container span:nth-child(1){
-    font-size: 26px;
-}
-
-.Aboutme-container span:nth-child(3){
-    letter-spacing: 13px;
-    font-weight:bolder;
-    font-size: 77px;
-    color: #E9B952;
-    border-radius: 30px;
-}
-
-.Aboutme-container-container button{
+.Aboutme-container div img {
     position: relative;
-    left: 27%;
-    background-color: #657a44;
-    width: 15vw;
-    height: 5.5vh;
-    min-width: 150px;
-    min-height: 15px;
-    font-family: "Poppins", serif;
-    color: #FFFFFF;
-    border: 0;
-    border-radius: 25px;
-    transition: 0.1s ease-in;
-}
-
-.Aboutme-container-container button:hover{
-    cursor: pointer;
-    box-shadow: 0px 0px 5px 0px rgb(243, 241, 125);
-    transform: scale(1.01);
-    color: rgb(247, 217, 179);
-}
-
-.Aboutme-container-container button a{
-    text-decoration: none;
-    display: block;
-    padding: 9px 0 ;
-    color: #FFFFFF;
+    flex: 1;  /* Allow each column to take up equal space */
+    width: clamp(15rem,25vw,50rem);
+    position: relative;
+    margin-top: 3rem;
     border-radius: 30px;
-}
-
-.me img{
-    width: 22vw;
-    min-width: 190px;
-    border-radius: 23%;
-    box-shadow: 1px 1px 2px 0px #E9B952;
+    max-width: 100%; /* Ensure the image is responsive */
 }
 
 
-.circle1{
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    min-width: 100px;
-    min-height: auto;
-    background-color: #505150;
-    border-radius: 50%;
-    bottom: -65px;
-    right: -50px;
+.Aboutme-container div text{
+    position: relative;
+    display: flex;
+    flex: 2;
+    color: antiquewhite;
 }
 
-.circle2{
-    position: absolute;
-    bottom: -145px;
-    right: -50px;
-    width: 300px;
-    height: 200px;
-    min-width: 100px;
-    min-height: auto;
-    background-color: #AF9748;
-    border-radius: 50%;
-    transform: rotate(30deg);
+.Aboutme-container .text h1{
+    position: relative;
+    font-family: "Poppins",serif;
+    width: clamp(5rem, 50vw, 40rem);
+    text-align:left;
+    line-height:clamp(20px, 5vw, 33px);
+    color: antiquewhite;
+    top: 1.8rem;
+}
+
+.Aboutme-container h1 span{
+    font-size:clamp(12px,1.5vw, 10rem);
+}
+
+@media (max-width: 1040px ){
+    .Aboutme-container .text h1{
+        position: relative;
+        top: -3rem;
+        padding: 0 10vw;
+        text-align:center;
+        line-height:clamp(30px, 5vw, 50px);
+        width: clamp(10rem, 50vw, 40rem);
+        
+    }
+    .Aboutme-container .text span{
+        position: relative;
+        text-align: justify;
+}
 }
 
 
-@media (max-width: 1047px){
-    .Aboutme-container-container{
-        display: flex;
-        flex-wrap: wrap-reverse;
-        justify-content: center;
-        align-items: center;
-        gap: 1em;
-        text-align: center;
+@media (max-width: 383px) {
+    .Aboutme-container div img { /* Add 5% of the viewport width to 271px */
+        margin-top:10rem;
     }
-
-    .Aboutme-container h1{
-        font-size: 4vw;
-        line-height:9vw;
-    }
-    
-    .Aboutme-container span:nth-child(1){
-        font-size: 4vw;
-    }
-    
-    .Aboutme-container span:nth-child(3){
-        font-size: 7vw;
-    }
-
-    .Aboutme-container-container button{
-        left: 0;
-    }
-
-    .circle1{
-        width: 20vw;
-        height: 20vw;
-    }
-
-    .circle2{
-        width: 20vw;
-        height: 30vw;
-        transform: rotate(120deg);
+    .abouth1{
+        top: 120px;
     }
 }
 
-.OJM{
-    position: absolute;
-    bottom:0;
-    left: 0;
-    margin-left: 20px;
-}
-
-.OJM h1{
-    line-height: 22px;
-    font-size: 12px;
-}
-
-.OJM h1 span:nth-child(2){
-    color: #E9B952;
-    font-size: 16px;
-    font-weight: bolder;
-    letter-spacing: 7px;
-}
-
-.OJM h1 span:nth-child(4){
-    color: #a56a46c5;
-    font-weight: bolder;
-    letter-spacing: 0px;
-}
-
-.ScrollDown{
-    position: absolute;
-    bottom:0;
-    font-size: 12px;
-    transition: 0.1s ease-in;
-}
-
-.ScrollDown i{
-    color: #E9B952;
-}
-
-@media (max-width: 600px){
-    .ScrollDown{
-        transform: translateY(100%)
+@media (max-width:272px) {
+    .Aboutme-container div img { /* Add 5% of the viewport width to 271px */
+        margin-top:15rem;
     }
-
-    .OJM h1{
-        font-size: 10px;
+    .abouth1{
+        top: 14rem;
     }
 }
 
-#light, #dark{position: fixed;
-    z-index: 4;
-    padding: 10px;
-    font-size: 30px;
-    bottom: 50px;
-    right: 50px;
-    border-radius: 50%;
-    border: 0;
+@media (max-width:255px) {
+    .Aboutme-container div img { /* Add 5% of the viewport width to 271px */
+        margin-top:28rem;
+    }
+
+    .abouth1{
+        top: 370px;
+    }
 }
 
-#light{
-    color: #E9B952;
-    background-color: #2a2525;
-    transition: box-shadow 0.3s ease, 0.2s ease;
+
+@media (max-width:247px) {
+    .Aboutme-container div img { /* Add 5% of the viewport width to 271px */
+        margin-top:28rem;
+    }
+
+    .abouth1{
+        top: 430px;
+    }
 }
 
-#light:hover{
-    box-shadow: 0 0 20px 0px #E9B952;
-    cursor: pointer;
-    transform: scale(1.1);
-}
 
-#dark{
-    color: #3a3a399d;
-    background-color: #ece8e8;
-    transition: box-shadow 0.3s ease,0.2s ease;
-}
-
-#dark:hover{
-    box-shadow: inset 4px 3px 15px 0px #2727269d;
-    cursor: pointer;
-    transform: scale(1.1);
-}

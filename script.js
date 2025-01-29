@@ -1,18 +1,21 @@
 const menu = document.getElementById("menu");
-const skills = document.getElementById("Skills-container");
-const aboutme = document.getElementById("Aboutme-container-container");
+const skills = document.getElementById("Skills-container-container");
+const home = document.getElementById("Home-container-container");
 const linkContainer = document.getElementById("link-container");
 const sideMenu = document.getElementById("sidemenu");
 const body = document.querySelector("body");
 const light = document.getElementById("light");
 const dark = document.getElementById("dark");
 const ojmh1 = document.querySelector(".OJM h1");
+const logo = document.getElementById("logo")
 const scrolldownp = document.querySelector(".ScrollDown p");
 const scrolldowni = document.querySelectorAll(".bx.bxs-chevrons-down");
-
 const h1 = document.querySelector("h1");
+const texth1 = document.querySelector(".text h1");
+const projecta = document.querySelector(".Projects-container-container a");
+const Up = document.getElementById("Up");
 
-menu.addEventListener("click", () => {
+/*menu.addEventListener("click", () => {
     if(linkContainer.style.transform != "translate(88%)"){
         linkContainer.style.transform = "translate(88%)";
     }
@@ -24,7 +27,12 @@ menu.addEventListener("click", () => {
     }
 
 
+});*/
+
+menu.addEventListener("click", () => {
+    linkContainer.classList.toggle("active");
 });
+
 
 light.addEventListener("click", () =>{
     body.style.backgroundColor = "#ece6e6";
@@ -36,6 +44,9 @@ light.addEventListener("click", () =>{
     scrolldowni.forEach((element) => {
         element.style.color = "#1D1919";
     });
+    texth1.style.color = "#1D1919";
+    projecta.style.color = "#1D1919"
+    Up.style.color ="#1D1919";
     dark.style.transform = "";
 });
 
@@ -49,26 +60,25 @@ dark.addEventListener("click", () =>{
     scrolldowni.forEach((element) => {
         element.style.color = "#E9B952";
     });
+    texth1.style.color = "antiquewhite";
+    projecta.style.color =  "antiquewhite";
+    Up.style.color ="#1D1919";
     light.style.transform = "";
 });
 
 window.addEventListener("scroll", () =>{    
 
     console.log(Math.floor(window.scrollY))
-    // Calculate the translateY value based on the scroll position
-    const translateValue = -window.scrollY * 1; // Adjust the multiplier for speed
+    // Translate the skills section upward as you scroll down
+    const translateValue = Math.max(-25, 20 - (scrollY / window.innerHeight) * 100); // Calculate percentage
+    skills.style.transform = `translateY(${translateValue}%)`;
 
-    // Apply the transformation
-    skills.style.transform = `translateY(${translateValue}px)`;
+    // Optional: Update the Home section's opacity or other effects
+    const opacityValue = Math.max(0, 1 - scrollY * 0.003); // Gradual fade-out
+    home.style.opacity = opacityValue;
 
-    const scaleValue = 1 + window.scrollY * -0.0002 // Adjust the multiplier for scaling speed
-
-    // Apply the scale transformation to aboutme
-    aboutme.style.transform = `scale(${scaleValue})`;
-
-    const opacityValue = 1 + window.scrollY * -0.003;
-
-    aboutme.style.opacity = `${opacityValue}`;
+    home.style.opacity = `${opacityValue}`;
+    logo.style.opacity = `${opacityValue}`;
     
     if (window.scrollY >= 330 && window.innerWidth <= 800){
     sideMenu.style.opacity = "1";
@@ -76,7 +86,8 @@ window.addEventListener("scroll", () =>{
     else{
     sideMenu.style.opacity = "0";
     sideMenu.style.width = "0px";
-    }   
+    }
+
 });
 
 
