@@ -47,6 +47,7 @@
 }
 
 .Aboutme-container div {
+    top: 20px;
     margin: 0;
     position: relative;
     display: flex;
@@ -84,7 +85,7 @@
 }
 
 .Aboutme-container h1 span{
-    font-size:clamp(12px,1.5vw, 10rem);
+    font-size:clamp(12px,1.3vw, 10rem);
 }
 
 @media (max-width: 1040px ){

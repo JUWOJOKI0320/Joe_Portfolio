@@ -204,7 +204,8 @@
     font-size: clamp(1.5rem,2.5vw,5rem);
     transform: rotate(180deg);
     background-color: #E9B952;
-    transition: 0.3s ease, box-shadow .3s ease;
+    opacity:0;
+    transition: 0.3s ease, box-shadow .3s ease ,opacity .3s ease;
 }
 
 #Up:hover{

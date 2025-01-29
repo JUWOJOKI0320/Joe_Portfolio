@@ -19,6 +19,9 @@ const abouth1 = document.getElementById("abouth1");
 const projecth1 = document.getElementById("projecth1");
 const contacth1 = document.querySelector(".contact-container h1");
 const inputs = document.querySelectorAll(".contact-inputs");
+const sidemenuButton = document.querySelector(".sidemenu button");
+const sidemenudark = document.querySelector(".sidemenu #dark");
+const sidemenulight = document.querySelector(".sidemenu #light");
 
 /*menu.addEventListener("click", () => {
     if(linkContainer.style.transform != "translate(88%)"){
@@ -38,60 +41,73 @@ menu.addEventListener("click", () => {
     linkContainer.classList.toggle("active");
 });
 
-
-light.addEventListener("click", () =>{
-    body.style.backgroundColor = "#ece6e6";
-    light.style.transform = "scale(0)";
-    dark.style.transform = "scale(1)";
-    h1.style.color = "#1D1919";
-    ojmh1.style.color = "#1D1919";
-    scrolldownp.style.color =  "#1D1919";
-    scrolldowni.forEach((element) => {
-        element.style.color = "#1D1919";
-    });
-    allParagraphs.forEach((paragraph) => {
-        paragraph.style.color = "#1D1919"; // Set to your desired color
-      });
-    inputs.forEach((input) => {
-        input.style.backgroundColor = "#1D1919"; // Change background to black
-        input.style.color = "white"; // Change text color to white for contrast
-    });
-    texth1.style.color = "#1D1919";
-    Up.style.color ="#1D1919";
-    abouth1.style.color = "#1D1919";
-    projecth1.style.color = "#1D1919";
-    contacth1.style.color = "#1D1919";
-    dark.style.transform = "";
+sidemenuButton.addEventListener("click", () =>{
+    sideMenu.classList.toggle("active");
+    sidemenuButton.style.transform = "rotate(90deg)";
 });
 
-dark.addEventListener("click", () =>{
-    body.style.backgroundColor = "#1D1919";
-    light.style.transform = "scale(1)";
-    dark.style.transform = "scale(0)";
-    h1.style.color = "#ece6e6";
-    ojmh1.style.color = "#ece6e6";
-    scrolldownp.style.color =  "#ece6e6";
-    scrolldowni.forEach((element) => {
-        element.style.color = "#E9B952";
-    });
-    allParagraphs.forEach((paragraph) => {
-        paragraph.style.color = "antiquewhite"; // Set to your desired color
-      });
-    inputs.forEach((input) => {
-        input.style.backgroundColor = ""; // Change background to black
-        input.style.color = ""; // Change text color to white for contrast
-    });
-    texth1.style.color = "antiquewhite";
-    Up.style.color ="#1D1919";
-    contacth1.style.color = "antiquewhite";
-    abouth1.style.color = "antiquewhite"
-    projecth1.style.color = "antiquewhite"
-    light.style.transform = "";
-});
+function handleModeChange(event) {
+    if (event.target === dark || event.target === sidemenudark) {
+        body.style.backgroundColor = "#1D1919";
+        light.style.transform = "scale(1)";
+        dark.style.transform = "scale(0)";
+        sidemenulight.style.transform = "scale(1)";
+        sidemenudark.style.transform = "scale(0)";
+        h1.style.color = "#ece6e6";
+        ojmh1.style.color = "#ece6e6";
+        scrolldownp.style.color =  "#ece6e6";
+        scrolldowni.forEach((element) => {
+            element.style.color = "#E9B952";
+        });
+        allParagraphs.forEach((paragraph) => {
+            paragraph.style.color = "antiquewhite"; // Set to your desired color
+        });
+        inputs.forEach((input) => {
+            input.style.backgroundColor = ""; // Change background to black
+            input.style.color = ""; // Change text color to white for contrast
+        });
+        texth1.style.color = "antiquewhite";
+        Up.style.color ="#1D1919";
+        contacth1.style.color = "antiquewhite";
+        abouth1.style.color = "antiquewhite"
+        projecth1.style.color = "antiquewhite"
+        light.style.transform = "";
+        sidemenulight.style.transform= "";
+    } else if (event.target === light || event.target === sidemenulight) {
+        body.style.backgroundColor = "#ece6e6";
+        light.style.transform = "scale(0)";
+        dark.style.transform = "scale(1)";
+        sidemenulight.style.transform = "scale(0)";
+        sidemenudark.style.transform = "scale(1)";
+        h1.style.color = "#1D1919";
+        ojmh1.style.color = "#1D1919";
+        scrolldownp.style.color =  "#1D1919";
+        scrolldowni.forEach((element) => {
+            element.style.color = "#1D1919";
+        });
+        allParagraphs.forEach((paragraph) => {
+            paragraph.style.color = "#1D1919"; // Set to your desired color
+        });
+        inputs.forEach((input) => {
+            input.style.backgroundColor = "#1D1919"; // Change background to black
+            input.style.color = "white"; // Change text color to white for contrast
+        });
+        texth1.style.color = "#1D1919";
+        Up.style.color ="#1D1919";
+        abouth1.style.color = "#1D1919";
+        projecth1.style.color = "#1D1919";
+        contacth1.style.color = "#1D1919";
+        dark.style.transform = "";
+        sidemenudark.style.transform= "";
+    }
+}
+
+dark.addEventListener("click", handleModeChange);
+light.addEventListener("click", handleModeChange);
+sidemenudark.addEventListener("click", handleModeChange);
+sidemenulight.addEventListener("click", handleModeChange);
 
 window.addEventListener("scroll", () =>{    
-
-    console.log(Math.floor(window.scrollY))
     // Translate the skills section upward as you scroll down
     const translateValue = Math.max(-25, 20 - (scrollY / window.innerHeight) * 100); // Calculate percentage
     skills.style.transform = `translateY(${translateValue}%)`;
@@ -100,9 +116,10 @@ window.addEventListener("scroll", () =>{
     const opacityValue = Math.max(0, 1 - scrollY * 0.003); // Gradual fade-out
     home.style.opacity = opacityValue;
 
+    console.log(opacityValue)
     home.style.opacity = `${opacityValue}`;
     logo.style.opacity = `${opacityValue}`;
-    Up.style.opacity = `${opacityValue+1}`;
+    Up.style.opacity = `${1 - opacityValue }`;
     
     if (window.scrollY >= 330 && window.innerWidth <= 800){
     sideMenu.style.opacity = "1";

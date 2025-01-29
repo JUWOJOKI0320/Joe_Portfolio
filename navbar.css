@@ -43,17 +43,101 @@ body::-webkit-scrollbar-thumb{
     color: #E9B952;
 }
 
-.sidemenu{
+.sidemenu button{
+    position:absolute;
+    z-index: 0;
+    top: 10%;
+    left: -20px;
+    font-size: 30px;
+    color: #1D1919;
+    padding: 30px 0  0;
+    background-color: #e9b95277;
+    border: none;
+    transition: .3s ease;
+    transform: rotate(90deg);
+    border-radius: 0 0 40px 40px;
+}
+
+.sidemenu button:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.sidemenu {
     position: fixed;
-    right: 2%;
-    top: 6%;
-    background-color: #e9b952;
-    z-index: 5;
-    width:0px;
-    padding: 10px;
-    border-radius: 32.5%;
+    right: 0;
+    display: flex;
+    flex-direction: column; /* Stack links vertically */
+    justify-content: left;
+    align-items: center;
+    background-color: #e9b952ea;
+    z-index: 60;
+    height: 100%;
+    padding: clamp(2rem,10vw,20rem); /* Add some padding around content */
     opacity: 0;
-    transition:.3s ease-in-out;
+    transform: translate(100%);
+    transition: .3s ease-in-out;
+}
+
+.sidemenu.active{
+    transform: translate(0%);
+    transition: transform 0.5s ease-in-out;
+}
+
+.sidemenu:hover{
+    cursor: pointer;
+}
+
+.sidemenu-container{
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 2px 0 2px 0;
+    top: 11.5%;
+}
+
+.sidemenu a{
+    color:  #1D1919;
+    text-decoration: none;
+    font-size: clamp(20px ,3vw, 40px);
+    font-family: "Poppins",serif;
+}
+
+.sidemenu #light, .sidemenu #dark{
+    position: absolute;
+    top: 36%;
+    right: 32%;
+    z-index: 100;
+    font-size: 22px;
+    border-radius: 50%;
+    border: 0;
+}
+
+.sidemenu #light{
+    color: #E9B952;
+    background-color: #2a2525;
+    transition: box-shadow 0.3s ease, 0.2s ease;
+}
+
+.sidemenu #light:hover{
+    box-shadow: 0 0 20px 0px #E9B952;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.sidemenu #dark{
+    color: #3a3a399d;
+    background-color: #ece8e8;
+    transition: box-shadow 0.3s ease,0.2s ease;
+}
+
+.sidemenu #dark:hover{
+    box-shadow: inset 4px 3px 15px 0px #2727269d;
+    cursor: pointer;
+    transform: scale(1.1);
 }
 
 .link-container{
