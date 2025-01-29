@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Genos:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Genos:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+#aboutme {
+    position: absolute;
+    top: 174.5%;
+    z-index: 10;
+    width: 100%;
+}
+
+.abouth1{
+    position: relative;
+    z-index: 50;
+    font-family: "Poppins",serif;
+    font-weight: bolder;
+    top: 20px;
+    text-align: center;
+    font-size: clamp(2rem,5vw,10rem);
+    color: antiquewhite;
+}
+
+.Aboutme-container {
+    padding-top: 5rem;
+    padding-bottom: 1rem;
+    position: relative;
+    bottom: 8.3rem;
+    height: auto;
+    display: flex;  /* Turn the container into a flex container */
+    justify-content: center;
+    align-items: center;
+    background-color: inherit;
+    flex-wrap: wrap;
+    flex-direction: row;  /* Default behavior: items are laid out in a row (side by side) */
+    gap: 60px;  /* Add space between the columns */
+}
+
+.Aboutme-container-container{
+    position: absolute;
+    height: auto;
+    top: 30px;
+    display: flex;  /* Turn the container into a flex container */
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;  /* Default behavior: items are laid out in a row (side by side) */
+    gap: 60px;  /* Add space between the columns */
+}
+
+.Aboutme-container div {
+    margin: 0;
+    position: relative;
+    display: flex;
+    justify-content: center;  /* To center the image in its grid cell */
+    align-items: center;  /* Vertically center the image */
+    margin-bottom: 20px;
+}
+
+.Aboutme-container div img {
+    position: relative;
+    flex: 1;  /* Allow each column to take up equal space */
+    width: clamp(15rem,25vw,50rem);
+    position: relative;
+    margin-top: 3rem;
+    border-radius: 30px;
+    max-width: 100%; /* Ensure the image is responsive */
+}
+
+
+.Aboutme-container div text{
+    position: relative;
+    display: flex;
+    flex: 2;
+    color: antiquewhite;
+}
+
+.Aboutme-container .text h1{
+    position: relative;
+    font-family: "Poppins",serif;
+    width: clamp(5rem, 50vw, 40rem);
+    text-align:left;
+    line-height:clamp(20px, 5vw, 33px);
+    color: antiquewhite;
+    top: 1.8rem;
+}
+
+.Aboutme-container h1 span{
+    font-size:clamp(12px,1.5vw, 10rem);
+}
+
+@media (max-width: 1040px ){
+    .Aboutme-container .text h1{
+        position: relative;
+        top: -3rem;
+        padding: 0 10vw;
+        text-align:center;
+        line-height:clamp(30px, 5vw, 50px);
+        width: clamp(10rem, 50vw, 40rem);
+        
+    }
+    .Aboutme-container .text span{
+        position: relative;
+        text-align: justify;
+}
+}
+
+
+@media (max-width: 383px) {
+    .Aboutme-container div img { /* Add 5% of the viewport width to 271px */
+        margin-top:10rem;
+    }
+    .abouth1{
+        top: 120px;
+    }
+}
+
+@media (max-width:272px) {
+    .Aboutme-container div img { /* Add 5% of the viewport width to 271px */
+        margin-top:15rem;
+    }
+    .abouth1{
+        top: 14rem;
+    }
+}
+
+@media (max-width:255px) {
+    .Aboutme-container div img { /* Add 5% of the viewport width to 271px */
+        margin-top:28rem;
+    }
+
+    .abouth1{
+        top: 370px;
+    }
+}
+
+
+@media (max-width:247px) {
+    .Aboutme-container div img { /* Add 5% of the viewport width to 271px */
+        margin-top:28rem;
+    }
+
+    .abouth1{
+        top: 430px;
+    }
+}
