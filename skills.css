@@ -94,6 +94,16 @@
     text-align: center;
 }
 
+#typescript{
+    height: clamp(4rem, 6.0vw, 10rem);
+    width: clamp(4rem, 8vw, 10rem);
+}
+
+#fastify{
+    height: clamp(4rem, 6.8vw, 10rem);
+    width: clamp(4rem, 8.7vw, 10rem);
+}
+
 .Aspiring{
     display: flex;
     justify-content:space-around;
